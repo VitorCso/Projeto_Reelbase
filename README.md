@@ -303,8 +303,8 @@ Este repositório segue a política de uso de IA da disciplina (semáforo pedag�
 ### Declaração de uso
 
 - **Houve uso de IA neste projeto?** Sim
-- **Ferramentas utilizadas:** Claude (Anthropic)
-- **Finalidade:** configuração do repositório e do fluxo de trabalho no Git; preenchimento das seções técnicas padrão deste README (estrutura de diretórios, instruções de execução, variáveis de ambiente, fluxo de contribuição); consulta técnica sobre a API do TMDB; esclarecimento de conceitos.
+- **Ferramentas utilizadas:** ChatGPT (OpenAI) e Claude (Anthropic)
+- **Finalidade:** apoio na organização do repositório e no uso do Git/GitHub; esclarecimento de conceitos técnicos; consulta sobre Python, Django, API REST, JSON, TMDB, MySQL, testes e segurança; apoio na revisão, organização e redação inicial de partes do README.
 - **O que NÃO foi delegado à IA:** definição do problema, objetivos, público-alvo, funcionalidades, requisitos, casos de uso, arquitetura e modelagem de dados.
 
 ---
