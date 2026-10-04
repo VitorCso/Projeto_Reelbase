@@ -35,36 +35,53 @@
 
 *Apresente o contexto, o problema e a solução proposta. Use linguagem objetiva (dois a quatro parágrafos).*
 
-[Descreva o que o sistema faz, para quem ele se destina e qual problema ele resolve.]
+O Reelbase é uma aplicação web voltada para usuários que desejam organizar e acompanhar os filmes que pretendem assistir, já assistiram ou decidiram abandonar. A proposta surge da dificuldade de manter essas informações centralizadas de forma simples e acessível.
 
-Os dados de filmes exibidos na aplicação são obtidos da API do [TMDB](https://www.themoviedb.org/).
+A aplicação funcionará como um backlog pessoal de filmes, permitindo que o usuário pesquise títulos, adicione filmes à sua lista, altere o status de acompanhamento e registre informações próprias, como notas e comentários.
+
+Os dados dos filmes exibidos na aplicação são obtidos da API do [TMDB](https://www.themoviedb.org/). As informações pessoais do usuário, como status, avaliação e comentário, serão gerenciadas pelo próprio Reelbase.
 
 ### Objetivos
 
-- **Objetivo geral:** [preencher]
+- **Objetivo geral:** centralizar e facilitar a organização do acompanhamento pessoal de filmes.
 - **Objetivos específicos:**
-  - [preencher]
+
+  - Permitir a busca de filmes pela API do TMDB.
+  - Permitir adicionar filmes ao backlog.
+  - Permitir organizar filmes por status.
+  - Permitir adicionar notas e comentários.
+  - Permitir filtrar e consultar os filmes salvos.
+  - Exibir um resumo das informações do backlog.
 
 ### Público-alvo
 
-- [preencher]
+- Pessoas que consomem filmes com frequência e desejam manter um controle pessoal dos títulos que pretendem assistir, já assistiram ou abandonaram.
 
 ---
 
 ## 2. Funcionalidades
 
-*Liste as funções previstas no sistema e marque o status de cada uma.*
 
 | Funcionalidade | Descrição | Status |
 | -------------- | --------- | ------ |
-| [preencher]    | [preencher] | Planejada |
+| Autenticação | Cadastro, login e logout de usuários | Planejada |
+| Busca de filmes | Pesquisa de filmes utilizando dados da API do TMDB | Planejada |
+| Visualização de filmes | Exibição de informações como título, sinopse, gênero, lançamento e avaliação | Planejada |
+| Backlog de filmes | Adição de filmes à lista pessoal do usuário | Planejada |
+| Gerenciamento do backlog | Consulta, alteração e remoção de filmes da lista pessoal | Planejada |
+| Status dos filmes | Classificação dos filmes como Quero assistir, Assistido ou Abandonado | Planejada |
+| Avaliação de filmes | Registro de nota e comentário pessoal para filmes assistidos | Planejada |
+| Filtros | Busca e filtragem dos filmes por status, gênero, ano ou avaliação | Planejada |
+| Relatórios | Exibição de informações consolidadas sobre o backlog do usuário | Planejada |
+| Exportação de relatório | Exportação ou impressão das informações do relatório | Planejada |
+| API REST | Disponibilização dos dados do sistema em formato JSON para consumo externo | Planejada |
 
 ### Requisitos não funcionais
 
-- **Desempenho:** [preencher]
-- **Segurança:** [preencher]
-- **Usabilidade:** [preencher]
-- **Disponibilidade:** [preencher]
+- **Desempenho:** As operações do sistema e consultas à API devem apresentar resposta em tempo adequado, preferencialmente em até 2 segundos em condições normais de uso.
+- **Segurança:** As senhas dos usuários devem ser armazenadas utilizando hash, as credenciais e chaves da API devem ser mantidas em variáveis de ambiente e o sistema deve utilizar HTTPS em produção.
+- **Usabilidade:** A interface deve ser intuitiva, responsiva e adaptável para utilização em computadores e dispositivos móveis.
+- **Disponibilidade:** O sistema deve permanecer disponível durante o período de utilização e apresentar mensagens adequadas ao usuário caso a API externa do TMDB esteja temporariamente indisponível.
 
 ---
 
@@ -89,11 +106,11 @@ A aplicação ainda não foi implementada (Fase 1). Os protótipos das telas ess
 | Backend            | Django                                            | 5.2 LTS     |
 | API REST           | Django REST Framework                             | 3.x         |
 | Frontend           | Django Templates, HTML5, CSS3, JavaScript         | —           |
-| Banco de dados     | [PostgreSQL / outro — confirmar]                  | [versão]    |
+| Banco de dados     | MySQL                                             | 8.0         |
 | API externa        | TMDB API (The Movie Database)                     | v3          |
-| Testes             | Django Test Framework, Postman ou Insomnia        | —           |
-| Segurança          | [Bandit ou Semgrep] (SAST), OWASP ZAP (DAST)      | —           |
-| Modelagem          | [draw.io / brModelo / outra — confirmar]          | —           |
+| Testes             | Django Test Framework + Postman                   | —           |
+| Segurança          | Bandit + OWASP ZAP                                | —           |
+| Modelagem          | draw.io                                           | —           |
 | Outras ferramentas | Git, GitHub                                       | —           |
 
 ---
@@ -161,9 +178,9 @@ Todo diagrama é versionado com o **arquivo-fonte editável** e uma **exportaç�
 
 | Nome                           | Matrícula | Função no projeto |
 | ------------------------------ | --------- | ----------------- |
-| Luís Eduardo Carvalho Ferreira | [000000]  | [preencher]       |
-| [Nome completo]                | [000000]  | [preencher]       |
-| [Nome completo]                | [000000]  | [preencher]       |
+| Vítor Camargo da Silva Oliveira | 22504727  | Arquiteto / Tech Lead       |
+| Luís Eduardo Carvalho Ferreira | 22505715  | Backend / Banco de Dados            |
+| Raphael Salvini Bourrus Henriques | 22501827  | Frontend / UI       |
 | [Nome completo]                | [000000]  | [preencher]       |
 
 **Professor responsável:** Felippe Pires Ferreira
