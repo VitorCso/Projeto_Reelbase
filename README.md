@@ -117,19 +117,30 @@ A aplicação ainda não foi implementada (Fase 1). Os protótipos das telas ess
 
 ## 5. Arquitetura
 
-*Explique como o sistema está organizado: camadas, principais componentes e o fluxo entre eles. O diagrama completo e as justificativas estão em [`docs/arquitetura/`](docs/arquitetura/).*
-
-[preencher]
+- O Reelbase utilizará uma arquitetura monolítica com Django.
+- A interface será feita com Django Templates, HTML, CSS e JavaScript.
+- O Django será responsável pelo login, backlog, regras do sistema e comunicação com a TMDB.
+- O MySQL 8.0 será utilizado para armazenar os dados dos usuários e do backlog.
+- A API própria será desenvolvida com Django REST Framework e utilizará JSON.
 
 **Decisões relevantes:**
 
-- [preencher]
+- [Arquitetura monolítica escolhida por ser mais simples de desenvolver e manter no futuro do projeto.]
+- [MySQL 8.0 escolhido como banco de dados.]
+- [TMDB será utilizada como fonte das informações dos filmes.]
+- [Django REST Framework utilizado para a API REST.]
+- [A comunicação com a TMDB será feita pelo backend para não expor a chave da API.]
 
 ### Endpoints principais
 
-| Método | Rota        | Descrição   |
-| ------ | ----------- | ----------- |
-| [—]    | [preencher] | [preencher] |
+| Método | Rota | Descrição |
+| ------ | ---- | --------- |
+| GET | `/api/backlog/` | Consultar os filmes do backlog |
+| POST | `/api/backlog/` | Adicionar um filme ao backlog |
+| GET | `/api/backlog/{id}/` | Consultar um filme específico do backlog |
+| PATCH | `/api/backlog/{id}/` | Alterar status, nota ou comentário |
+| DELETE | `/api/backlog/{id}/` | Remover um filme do backlog |
+| GET | `/api/relatorios/resumo/` | Consultar um resumo do backlog |
 
 Contrato completo da API: [`docs/api/`](docs/api/)
 
